@@ -1,0 +1,49 @@
+<section class="scope" id="scope-section">
+    <!-- Content -->
+    <div class="scope__content">
+        <div class="scope__content-wrapper">
+            <h6 class="scope__subtitle">
+                {{ translation.translate('scope_subtitle') }}
+            </h6>
+            <h2 class="scope__title">
+                {{ translation.translate('scope_title') }}
+            </h2>
+            <p class="scope__description">
+                {{ translation.translate('scope_description') }}
+            </p>
+        </div>
+
+        <!-- Custom Navigation Arrows -->
+        <div class="scope__navigation d-none d-lg-flex">
+            <div class="scope-swiper-button-prev-custom" (click)="goPrev()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-left">
+                    <path d="m12 19-7-7 7-7" />
+                    <path d="M19 12H5" />
+                </svg>
+            </div>
+            <div class="scope-swiper-button-next-custom" (click)="goNext()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-right">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <swiper-container #swiperElement class="scope__slider" init="false" (slidechange)="onSlideChange($event)">
+        <swiper-slide *ngFor="let card of cards; trackBy: trackBySlideId">
+            <div class="card" (mouseenter)="card.isHovered = true" (mouseleave)="card.isHovered = false">
+                <div class="card__info">
+                    <h3 class="card__title">{{ card.title }}</h3>
+                    <p class="card__description">{{ card.description }}</p>
+                </div>
+                <img [src]="card.isHovered ? card.iconColored : card.icon" alt="{{ card.title }}" class="card__icon">
+                <span class="card__index">{{ card.index }}</span>
+            </div>
+        </swiper-slide>
+    </swiper-container>
+</section>

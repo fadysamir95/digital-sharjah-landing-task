@@ -1,0 +1,93 @@
+/* --------------------------------------------------
+  Global Reset / Normalize Styles for Angular (SCSS)
+-------------------------------------------------- */
+
+/* 1. Box-sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Reset margins and paddings */
+html, body, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 3. Set default line height and background */
+html, body {
+  height: 100%;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  scroll-behavior: smooth;
+}
+
+/* 4. Make images and videos responsive */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 5. Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* 6. Remove link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 7. Remove default button styles */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* 8. Table styling reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 9. Remove default input and textarea styles */
+input, textarea, select, button {
+  font: inherit;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+/* 10. Set smoother transitions */
+*, *::before, *::after {
+  transition: all 0.3s ease;
+}
+
+/* 11. Set default styles for paragraphs */
+p {
+  margin-bottom: 0;
+}

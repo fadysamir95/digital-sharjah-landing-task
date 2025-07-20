@@ -1,0 +1,137 @@
+@use '../../../../../assets/scss/abstracts/variables' as *;
+@use '../../../../../assets/scss/abstracts/functions' as *;
+@use '../../../../../assets/scss/abstracts/mixins' as *;
+
+.download {
+  text-align: center;
+  padding: to-rem(100) 0;
+
+  &__subtitle {
+    font-size: to-rem(16);
+    text-transform: uppercase;
+    margin-bottom: to-rem(15);
+    color: #AAB0BC;
+    font-family: $font-family-heavy;
+  }
+
+  &__title {
+    font-size: to-rem(36);
+    font-family: $font-family-heavy;
+    color: #343F52;
+    margin-bottom: to-rem(30);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: to-rem(16);
+    margin: 0 auto;
+  }
+
+  &__item {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: to-rem(12);
+    padding: to-rem(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: to-rem(23);
+    text-align: left;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: to-rem(16);
+  }
+
+  &__icon {
+    width: to-rem(36);
+  }
+
+  &__filename {
+    margin: 0;
+    font-size: to-rem(20);
+    font-family: $font-family-heavy;
+  }
+
+  &__desc {
+    font-size: to-rem(18);
+    color: #AAB0BC;
+    font-family: $font-family-regular;
+  }
+
+  &__right {
+    text-align: right;
+    display: flex;
+  }
+
+  &__date {
+    font-size: to-rem(18);
+    font-family: $font-family-regular;
+    color: #AAB0BC;
+    margin-right: to-rem(30);
+  }
+
+  &__link {
+    color: #21AF27;
+    font-family: $font-family-regular;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: to-rem(8);
+
+    span {
+        margin-top: to-rem(5);
+    }
+  }
+}
+
+// Responsive styles
+@include tablet {
+  .download {
+    padding: to-rem(80) 0;
+
+    &__list {
+      gap: to-rem(20);
+    }
+
+    &__item {
+      flex-direction: column;
+    }
+
+    &__title {
+      font-size: to-rem(28);
+      margin-bottom: to-rem(40);
+      margin: 0 auto to-rem(40) auto;
+      max-width: 90%;
+    }
+
+    &__left {
+      flex-direction: column;
+      gap: to-rem(28);
+      align-items: flex-start;
+    }
+
+    &__desc {
+      margin-bottom: to-rem(28);
+      font-size: to-rem(14);
+    }
+
+    &__right {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__date {
+      margin-right: 0;
+      margin-bottom: to-rem(15);
+    }
+  }
+}

@@ -1,0 +1,181 @@
+@use '../../../../../assets/scss/abstracts/variables' as *;
+@use '../../../../../assets/scss/abstracts/functions' as *;
+@use '../../../../../assets/scss/abstracts/mixins' as *;
+
+.vision {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: to-rem(100) 0;
+  flex-wrap: wrap;
+
+  &__content {
+    flex: 1;
+    max-width: to-rem(700);
+  }
+
+  &__subtitle {
+    font-size: to-rem(18);
+    text-transform: uppercase;
+    margin-bottom: to-rem(15);
+    color: #AAB0BC;
+    font-family: $font-family-heavy;
+  }
+
+  &__title {
+    font-size: to-rem(36);
+    font-family: $font-family-heavy;
+    color: #343F52;
+    margin-bottom: to-rem(30);
+  }
+
+  &__description {
+    font-size: to-rem(14);
+    color: #AAB0BC;
+    margin-bottom: to-rem(32);
+    font-family: $font-family-regular;
+  }
+
+  &__team {
+    display: flex;
+    gap: to-rem(32);
+  }
+
+  &__member {
+    display: flex;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: to-rem(28);
+      justify-content: flex-end;
+    }
+
+    &-name {
+      font-size: to-rem(16);
+      margin-bottom: to-rem(12);
+      font-family: $font-family-heavy;
+      color: #343F52;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: to-rem(47);
+        height: 2px;
+        background-color: #92C83E;
+        position: absolute;
+        left: 0;
+        top: -12px;
+      }
+    }
+
+    &-position {
+      font-family: $font-family-regular;
+      font-size: to-rem(14);
+      color: #AAB0BC;
+    }
+  }
+
+  &__image {
+    width: to-rem(114);
+    height: to-rem(132);
+    object-fit: cover;
+  }
+
+  &__highlight {
+    position: relative;
+    margin-top: to-rem(50);
+  }
+
+  &__label {
+    font-size: to-rem(26);
+    font-family: $font-family-heavy;
+    color: #AAB0BC;
+    margin-bottom: to-rem(46);
+    z-index: 6;
+    position: relative;
+  }
+
+  &__video {
+    height: to-rem(215);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: $font-family-heavy;
+    font-size: to-rem(265);
+    background: #fff;
+    color: #000;
+    mix-blend-mode: screen;
+  }
+
+  &__departments {
+    font-size: to-rem(40);
+    color: #343F52;
+    font-family: $font-family-heavy;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+// Responsive styles
+@include mobile {
+  .vision {
+    padding: to-rem(80) 0;
+    flex-direction: column-reverse;
+
+    &__highlight {
+      margin-top: 0;
+    }
+
+    &__text {
+      font-size: to-rem(190);
+    }
+
+    &__label {
+      margin-bottom: 0;
+      text-align: center;
+      font-size: to-rem(18);
+    }
+
+    &__departments {
+      text-align: center;
+      font-size: to-rem(24);
+    }
+
+    &__subtitle {
+      margin-top: to-rem(80);
+      font-size: to-rem(14);
+    }
+
+    &__title {
+      font-size: to-rem(24);
+      line-height: to-rem(28);
+      margin-top: to-rem(20);
+    }
+
+    &__team {
+      flex-direction: column;
+      gap: to-rem(48);
+    }
+
+    &__description {
+      margin-bottom: to-rem(48);
+    }
+
+    &__video {
+      height: to-rem(180);
+      width: 100vw;
+    }
+  }
+}

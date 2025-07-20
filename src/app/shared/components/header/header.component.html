@@ -1,0 +1,145 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" [class.sticky]="isSticky">
+  <div class="container-fluid">
+    <a class="navbar-brand" (click)="scrollTo('hero-slider-section')">
+      <img src="../../../../assets/images/logo.png" alt="Digital Sharjah Logo" class="logo" />
+    </a>
+
+    <div class="navbar-side">
+      <span class="language-switcher d-block d-lg-none" (click)="switchLanguage()">
+        {{ translation.translate('switch_lang_label') }}
+      </span>
+
+      <button #toggler class="navbar-toggler" type="button" (click)="toggleNav()" [attr.aria-expanded]="isNavOpen" [class.collapsed]="!isNavOpen" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollTo('hero-slider-section')" [class.active]="activeSection === 'hero-slider-section'">
+            {{ translation.translate('home') }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollTo('vision-section')" [class.active]="activeSection === 'vision-section'">
+            {{ translation.translate('our_vision') }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollTo('scope-section')" [class.active]="activeSection === 'scope-section'">
+            {{ translation.translate('our_scope') }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollTo('services-section')" [class.active]="activeSection === 'services-section'">
+            {{ translation.translate('services') }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollTo('initiatives-section')" [class.active]="activeSection === 'initiatives-section'">
+            {{ translation.translate('initiatives') }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollTo('download-section')" [class.active]="activeSection === 'download-section'">
+            {{ translation.translate('download') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Language Switch + Accessibility -->
+      <div class="navbar-tools">
+        <!-- Accessibility -->
+        <div class="accessibility" #accessibilityWrapper>
+          <button class="accessibility__trigger" (click)="toggleAccessibility()">
+            <img src=".../../../../assets/images/accessibility.png" [alt]="translation.translate('accessibility_alt')" />
+          </button>
+
+          <div *ngIf="isAccessibilityOpen" class="accessibility__dropdown">
+            <!-- Text Resize -->
+            <div class="accessibility__section">
+              <h4 class="accessibility__title">{{ translation.translate('text_resize') }}</h4>
+              <p class="accessibility__desc">{{ translation.translate('text_resize_desc') }}</p>
+              <div class="accessibility__resize-options">
+                <button *ngFor="let size of fontSizes" [class.active]="selectedFont === size.value"
+                  (click)="setFontSize(size.value)">
+                  {{ size.label }}
+                </button>
+              </div>
+            </div>
+
+            <!-- Contrast Switch -->
+            <div class="accessibility__section">
+              <h4 class="accessibility__title">{{ translation.translate('contrast_switch') }}</h4>
+              <p class="accessibility__desc">{{ translation.translate('contrast_switch_desc') }}</p>
+              <div class="accessibility__contrast-options">
+                <label *ngFor="let mode of contrastModes" class="contrast-option">
+                  <input type="radio" name="contrast" [value]="mode.value" [(ngModel)]="selectedContrast"
+                    (change)="applyContrastMode(mode.value)" />
+                  <span [class.selected]="selectedContrast === mode.value" class="circle"></span>
+                  {{ mode.label }}
+                </label>
+              </div>
+            </div>
+
+            <!-- Screen Reader -->
+            <div class="accessibility__section screen-reader">
+              <div class="accessibility__info">
+                <h4 class="accessibility__title">{{ translation.translate('screen_reader') }}</h4>
+                <p class="accessibility__desc">{{ translation.translate('screen_reader_desc') }}</p>
+              </div>
+              <button class="accessibility__speaker-btn" (click)="triggerScreenReader()">
+                <img src="assets/icons/speaker.svg" [alt]="translation.translate('read_speaker_alt')" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <span class="separator"></span>
+
+        <span class="language-switcher" (click)="switchLanguage()">
+          {{ translation.translate('switch_lang_label') }}
+        </span>
+      </div>
+
+      <!-- Accessibility Panel Mobile -->
+      <div class="accessibility-panel d-lg-none">
+        <div class="accessibility__section">
+          <h4 class="accessibility__title">{{ translation.translate('text_resize') }}</h4>
+          <p class="accessibility__desc">{{ translation.translate('text_resize_desc') }}</p>
+          <div class="accessibility__resize-options">
+            <button *ngFor="let size of fontSizes" [class.active]="selectedFont === size.value"
+              (click)="setFontSize(size.value)">
+              {{ size.label }}
+            </button>
+          </div>
+        </div>
+
+        <div class="accessibility__section">
+          <h4 class="accessibility__title">{{ translation.translate('contrast_switch') }}</h4>
+          <p class="accessibility__desc">{{ translation.translate('contrast_switch_desc') }}</p>
+          <div class="accessibility__contrast-options">
+            <label *ngFor="let mode of contrastModes" class="contrast-option">
+              <input type="radio" name="contrast" [value]="mode.value" [(ngModel)]="selectedContrast"
+                (change)="applyContrastMode(mode.value)" />
+              <span [class.selected]="selectedContrast === mode.value" class="circle"></span>
+              {{ mode.label }}
+            </label>
+          </div>
+        </div>
+
+        <div class="accessibility__section screen-reader">
+          <div class="accessibility__info">
+            <h4 class="accessibility__title">{{ translation.translate('screen_reader') }}</h4>
+            <p class="accessibility__desc">{{ translation.translate('screen_reader_desc') }}</p>
+          </div>
+          <button class="accessibility__speaker-btn" (click)="triggerScreenReader()">
+            <img src="assets/icons/speaker.svg" [alt]="translation.translate('read_speaker_alt')" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,34 @@
+<div class="leadership" id="initiatives-section">
+  <div class="leadership__header">
+    <p class="leadership__subtitle">{{ translation.translate('initiatives') }}</p>
+    <h2 class="leadership__title">{{ translation.translate('initiatives_subtitle') }}</h2>
+  </div>
+
+  <div class="leadership__content">
+    <div class="leadership__accordion">
+      <div class="leadership__item" *ngFor="let item of initiatives; let i = index">
+        <button class="leadership__item-header" (click)="toggleItem(i)"
+                [attr.aria-expanded]="activeIndex === i">
+          <div class="leadership__item-header-content">
+            <span class="leadership__item-number">{{ item.index }}</span>
+            <span class="leadership__item-title">{{ item.title }}</span>
+          </div>
+          <span class="leadership__item-toggle">
+            <img
+              [src]="activeIndex === i ? 'assets/icons/angle-up.svg' : 'assets/icons/angle-down.svg'"
+              alt="Toggle Arrow"
+              class="leadership__toggle-icon"
+            />
+          </span>
+        </button>
+        <div class="leadership__item-body" [class.open]="activeIndex === i">
+          <p class="leadership__item-desc">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="leadership__media">
+      <img src="assets/images/leadership-placeholder.png" alt="{{ translation.translate('initiatives_image_alt') }}" class="leadership__image" />
+    </div>
+  </div>
+</div>

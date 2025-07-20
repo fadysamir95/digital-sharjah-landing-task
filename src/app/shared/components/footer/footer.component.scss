@@ -1,0 +1,118 @@
+@use '../../../../assets/scss/abstracts/variables' as *;
+@use '../../../../assets/scss/abstracts/functions' as *;
+@use '../../../../assets/scss/abstracts/mixins' as *;
+
+.footer {
+  background: #F6F7F8;
+  margin-bottom: to-rem(50);
+  border-radius: to-rem(20);
+
+  &__container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    padding: to-rem(60);
+    justify-content: space-between;
+  }
+
+  &__logo img {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: to-rem(24);
+    justify-content: center;
+
+    a {
+      color: #292929;
+      text-decoration: none;
+      font-size: to-rem(16);
+      font-family: $font-family-regular;
+      cursor: pointer;
+
+      &:hover {
+        color: #1fc01f;
+      }
+    }
+  }
+
+  &__divider {
+    border: none;
+    height: 1px;
+    background: #E6E7EB;
+    margin: 0;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: to-rem(40) to-rem(60);
+  }
+
+  &__copyright {
+    font-size: to-rem(14);
+    color: #ADADAD;
+    font-family: $font-family-regular;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+
+    a {
+        margin-right: to-rem(12);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    span {
+        font-size: to-rem(14);
+        color: #60697B;
+        font-family: $font-family-regular;
+        margin-right: to-rem(16);
+    }
+  }
+}
+
+// Responsive styles
+@include mobile {
+  .footer {
+    margin-top: to-rem(20);
+    margin-bottom: to-rem(150);
+
+    &__top {
+      flex-direction: column;
+      padding: to-rem(40) to-rem(20);
+    }
+
+    &__nav {
+      margin-top: to-rem(38);
+
+      a {
+        font-size: to-rem(14);
+      }
+    }
+
+    &__bottom {
+      flex-direction: column;
+      text-align: center;
+      padding: to-rem(28) 0;
+    }
+
+    &__copyright {
+      margin-top: to-rem(30);
+      margin-bottom: to-rem(30);
+      max-width: 85%;
+    }
+  }
+}

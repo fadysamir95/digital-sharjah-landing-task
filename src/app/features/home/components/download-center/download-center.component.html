@@ -1,0 +1,26 @@
+<section class="download" id="download-section">
+  <p class="download__subtitle">{{ translation.translate('download') }}</p>
+  <h2 class="download__title">{{ translation.translate('download_subtitle') }}</h2>
+
+  <div class="download__list">
+    <div class="download__item" *ngFor="let file of downloadItems">
+      <div class="download__left">
+        <div class="download__top">
+          <img src="assets/icons/pdf.svg" alt="PDF Icon" class="download__icon">
+          <h4 class="download__filename">{{ translation.translate('download_file_title') }}</h4>
+        </div>
+        <p class="download__desc">
+          {{ translation.translate('download_file_desc') }}
+        </p>
+      </div>
+
+      <div class="download__right">
+        <p class="download__date">{{ file.date }}</p>
+        <a [href]="file.link" class="download__link" download>
+          <img src="assets/icons/download.svg" />
+          <span>{{ translation.translate('download_button') }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

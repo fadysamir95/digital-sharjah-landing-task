@@ -1,0 +1,39 @@
+<div class="ocg" id="services-section">
+  <!-- Header -->
+  <div class="ocg__header">
+    <h6 class="ocg__subtitle">{{ translation.translate('services') }}</h6>
+    <h2 class="ocg__title">{{ translation.translate('services_subtitle') }}</h2>
+  </div>
+
+  <!-- Filters -->
+  <div class="ocg__filters">
+    <button
+      *ngFor="let category of categories"
+      class="ocg__filter"
+      [class.ocg__filter--active]="activeCategory === category"
+      (click)="setCategory(category)">
+      {{ category }}
+    </button>
+  </div>
+
+  <!-- Cards -->
+  <div class="ocg__grid">
+    <div class="ocg__card" *ngFor="let service of filteredServices">
+      <div class="ocg__card-header">
+        <div class="ocg__card-title">{{ service.title }}</div>
+        <div class="ocg__card-icon">
+          <img [src]="service.icon" [alt]="service.title" />
+        </div>
+      </div>
+      <div class="ocg__card-desc">{{ service.description }}</div>
+    </div>
+  </div>
+
+  <!-- View More -->
+  <div class="ocg__view-more">
+    <button class="ocg__view-more-btn">
+      <span class="ocg__view-more-icon">＋</span>
+      {{ translation.translate('view_more') }}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+<div class="container-fluid">
+  <div class="hero-slider-container" id="hero-slider-section">
+    <swiper-container #swiperEl class="hero-slider" init="false" (slidechange)="onSlideChange($event)">
+      <swiper-slide *ngFor="let slide of slides; trackBy: trackBySlideId" class="hero-slide">
+        <!-- Video Background -->
+        <div class="slide-background">
+          <video *ngIf="slide.video" class="hero-video" autoplay muted loop playsinline [poster]="slide.image">
+            <source [src]="slide.video" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <img *ngIf="!slide.video && slide.image" [src]="slide.image" [alt]="slide.title" class="hero-image">
+        </div>
+
+        <!-- Overlay -->
+        <div class="slide-overlay"></div>
+
+        <!-- Content -->
+        <div class="slide-content">
+          <div class="content-wrapper">
+            <!-- Main Content Section -->
+            <div class="main-content-section">
+              <div class="text-content">
+                <h1 class="slide-title">{{ slide.title }}</h1>
+                <p class="slide-description">{{ slide.description }}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+
+    <!-- Custom Navigation Arrows -->
+    <div class="swiper-button-prev-custom" (click)="goPrev()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-arrow-left">
+        <path d="m12 19-7-7 7-7" />
+        <path d="M19 12H5" />
+      </svg>
+    </div>
+    <div class="swiper-button-next-custom" (click)="goNext()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-arrow-right">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    </div>
+
+    <!-- Custom Bottom Pagination -->
+    <div class="custom-pagination">
+      <div class="pagination-labels">
+        <div class="pagination-item" *ngFor="let slide of slides; let i = index"
+          [class.active]="currentSlideIndex === i" (click)="goToSlide(i)">
+          <p class="label-text">{{ slide.paginationLabel }}</p>
+          <p class="desc">{{ slide.paginationDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-container *ngFor="let point of points; let i = index">
+    <!-- Ping Indicator -->
+    <div class="ping-indicator" (click)="toggleCard(i); $event.stopPropagation()"
+      [ngStyle]="{ left: point.left, bottom: point.bottom, position: 'absolute', zIndex: 1 }">
+      <div class="ping-indicator__ring"></div>
+      <a class="ping-indicator__dot"></a>
+      <div class="ping-indicator__line"></div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="statistics-section statistic-card" *ngIf="point.visible" (click)="$event.stopPropagation()"
+      [ngStyle]="{ left: getAdjustedLeft(point.left), bottom: getAdjustedBottom(point.bottom), position: 'absolute', zIndex: 2 }">
+      <div class="statistic-point">
+        <div class="statistic-value">{{ point.value }}</div>
+        <div class="statistic-label">{{ point.label }}</div>
+        <div class="statistic-data">
+          <div class="using-label">
+            <img src="assets/icons/sharjah-digital-app.png" alt="" />
+            <div>
+              <p>Using</p>
+              <p>Sharjah Digital App</p>
+            </div>
+          </div>
+          <div class="statistic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

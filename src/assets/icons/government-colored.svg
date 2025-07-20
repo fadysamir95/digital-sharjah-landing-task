@@ -1,0 +1,24 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 157 157" width="157" height="157">
+	<title>government</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h157v157h-157z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: #aab0bc } 
+	</style>
+	<filter id="f0">
+		<feFlood flood-color="#21af27" flood-opacity="1" />
+		<feBlend mode="normal" in2="SourceGraphic"/>
+		<feComposite in2="SourceAlpha" operator="in" />
+	</filter>
+	<g id="Clip-Path" clip-path="url(#cp1)" filter="url(#f0)">
+		<g>
+			<path class="s0" d="m76.1 0c-4.1 0-7.4 3.3-7.4 7.4v3.2c-24.6 4.1-44.1 23.6-48.2 48.3h-0.8c-5.5 0-9.9 4.4-9.9 9.8 0 5.4 4.4 9.8 9.9 9.8h117.7c5.5 0 9.8-4.4 9.8-9.8 0-5.4-4.3-9.8-9.8-9.8h-0.8c-4.1-24.7-23.6-44.2-48.3-48.3v-3.2c0-4.1-3.2-7.4-7.3-7.4z"/>
+			<g style="opacity: .4">
+				<path class="s0" d="m39.3 78.5h-19.6v50.4c-0.2 0.1-0.4 0.2-0.6 0.3l-14.7 9.9c-3.6 2.4-5.2 6.8-4 11 1.3 4.1 5.1 6.9 9.4 6.9h137.4c4.3 0 8.1-2.8 9.4-6.9 1.2-4.2-0.4-8.6-4-11l-14.7-9.9c-0.2-0.1-0.4-0.2-0.6-0.3v-50.4h-19.5v49.1h-12.3v-49.1h-19.6v49.1h-14.7v-49.1h-19.7v49.1h-12.2z"/>
+			</g>
+		</g>
+	</g>
+</svg>

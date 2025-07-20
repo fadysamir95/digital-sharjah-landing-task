@@ -1,0 +1,33 @@
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__top">
+      <div class="footer__logo">
+        <img src="assets/images/footer-logo.png" alt="{{ translation.translate('footer_logo_alt') }}" (click)="scrollTo('hero-slider-section')" />
+      </div>
+
+      <nav class="footer__nav">
+        <a (click)="scrollTo('hero-slider-section')" [class.active]="activeSection === 'hero-slider-section'">{{ translation.translate('home') }}</a>
+        <a (click)="scrollTo('vision-section')" [class.active]="activeSection === 'vision-section'">{{ translation.translate('our_vision') }}</a>
+        <a (click)="scrollTo('scope-section')" [class.active]="activeSection === 'scope-section'">{{ translation.translate('our_scope') }}</a>
+        <a (click)="scrollTo('services-section')" [class.active]="activeSection === 'services-section'">{{ translation.translate('services') }}</a>
+        <a (click)="scrollTo('initiatives-section')" [class.active]="activeSection === 'initiatives-section'">{{ translation.translate('initiatives') }}</a>
+        <a (click)="scrollTo('download-section')" [class.active]="activeSection === 'download-section'">{{ translation.translate('download') }}</a>
+      </nav>
+    </div>
+
+    <hr class="footer__divider" />
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">
+        {{ translation.translate('footer_copyright') }}
+      </p>
+      <div class="footer__social">
+        <span>{{ translation.translate('footer_follow') }}</span>
+        <a href="javascript:void(0)"><img src="assets/icons/facebook.svg" alt="Facebook" /></a>
+        <a href="javascript:void(0)"><img src="assets/icons/instagram.svg" alt="Instagram" /></a>
+        <a href="javascript:void(0)"><img src="assets/icons/youtube.svg" alt="YouTube" /></a>
+        <a href="javascript:void(0)"><img src="assets/icons/x-twitter.svg" alt="Twitter" /></a>
+      </div>
+    </div>
+  </div>
+</footer>

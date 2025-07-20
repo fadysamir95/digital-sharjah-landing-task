@@ -1,0 +1,254 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "video": "assets/images/hero-video.mp4",
+      "title": "Establishing Sharjah as a global leader in innovation, safety and security",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised.",
+      "paginationLabel": "Empower People",
+      "paginationDescription": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+      "statistic": {
+        "value": "1.2m",
+        "label": "Active Citizen & Resident"
+      },
+      "sections": [
+        {
+          "title": "Empower People",
+          "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+        },
+        {
+          "title": "Digital Transformation",
+          "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+        },
+        {
+          "title": "Datacenter",
+          "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "video": "assets/images/hero-video.mp4",
+      "title": "Building Tomorrow's Smart City Infrastructure",
+      "description": "Innovative solutions and cutting-edge technology driving sustainable urban development across Sharjah.",
+      "paginationLabel": "Digital Transformation",
+      "paginationDescription": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+      "statistic": {
+        "value": "500+",
+        "label": "Smart Services Available"
+      },
+      "sections": [
+        {
+          "title": "Smart Infrastructure",
+          "description": "Advanced IoT systems and smart city solutions enhancing quality of life for residents."
+        },
+        {
+          "title": "Sustainable Development",
+          "description": "Green initiatives and eco-friendly practices shaping the future of urban living."
+        },
+        {
+          "title": "Innovation Hub",
+          "description": "Fostering entrepreneurship and technological advancement through dedicated innovation centers."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "video": "assets/images/hero-video.mp4",
+      "title": "Connecting Communities Through Digital Excellence",
+      "description": "Bridging the digital divide and creating inclusive opportunities for all residents of Sharjah.",
+      "paginationLabel": "Datacenter",
+      "paginationDescription": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+      "statistic": {
+        "value": "95%",
+        "label": "Digital Service Adoption"
+      },
+      "sections": [
+        {
+          "title": "Digital Inclusion",
+          "description": "Ensuring equal access to digital services and opportunities for all community members."
+        },
+        {
+          "title": "E-Government",
+          "description": "Streamlined government services accessible 24/7 through digital platforms."
+        },
+        {
+          "title": "Community Engagement",
+          "description": "Interactive platforms fostering citizen participation in city development initiatives."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "video": "assets/images/hero-video.mp4",
+      "title": "Pioneering Sustainable Urban Development",
+      "description": "Leading the way in environmental conservation and sustainable city planning for future generations.",
+      "paginationLabel": "Active Service Directory",
+      "paginationDescription": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+      "statistic": {
+        "value": "80%",
+        "label": "Green Energy Usage"
+      },
+      "sections": [
+        {
+          "title": "Green Technology",
+          "description": "Implementing renewable energy solutions and sustainable technologies across the city."
+        },
+        {
+          "title": "Environmental Protection",
+          "description": "Comprehensive programs to preserve natural resources and reduce carbon footprint."
+        },
+        {
+          "title": "Future Planning",
+          "description": "Strategic urban development plans ensuring sustainability for generations to come."
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "left": "19%",
+      "bottom": "22%",
+      "visible": false,
+      "value": "95%",
+      "label": "Digital Service Adoption"
+    },
+    {
+      "left": "38%",
+      "bottom": "14%",
+      "visible": false,
+      "value": "80%",
+      "label": "Smart Service Usage"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "CSAM Brochure 2023",
+      "description": "Vivamus sagittis lacus augue fusce dapibus tellus nibh.",
+      "date": "February 2024",
+      "link": "#"
+    },
+    {
+      "title": "CSAM Brochure 2023",
+      "description": "Vivamus sagittis lacus augue fusce dapibus tellus nibh.",
+      "date": "February 2024",
+      "link": "#"
+    },
+    {
+      "title": "CSAM Brochure 2023",
+      "description": "Vivamus sagittis lacus augue fusce dapibus tellus nibh.",
+      "date": "February 2024",
+      "link": "#"
+    }
+  ],
+  "initiatives": [
+    {
+      "index": "01",
+      "title": "AI & Machine Learnings Initiative",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text, Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum dummy text has been the industry standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text."
+    },
+    {
+      "index": "02",
+      "title": "Lorem Ipsum is simply dummy text of the printing",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text, Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum dummy text has been the industry standard dummy text."
+    },
+    {
+      "index": "03",
+      "title": "Lorem Ipsum is simply dummy text of the printing",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text, Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "index": "04",
+      "title": "Lorem Ipsum is simply dummy text of the printing",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text, Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum dummy text has been the industry standard dummy text."
+    }
+  ],
+  "services": [
+    {
+      "title": "Infrastructure",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/infrastructure.svg",
+      "category": "Digital Infrastructure"
+    },
+    {
+      "title": "Hosting",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/hosting.svg",
+      "category": "Digital Infrastructure"
+    },
+    {
+      "title": "Optimize",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/optimize.svg",
+      "category": "Operations Management"
+    },
+    {
+      "title": "Connect",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/connect.svg",
+      "category": "Operations Management"
+    },
+    {
+      "title": "Colocate",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/colocate.svg",
+      "category": "Digital Infrastructure"
+    },
+    {
+      "title": "Insight",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/insight.svg",
+      "category": "Government Experience"
+    },
+    {
+      "title": "License",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/license.svg",
+      "category": "Government Experience"
+    },
+    {
+      "title": "Assess",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/assess.svg",
+      "category": "Training & Assessment"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "title": "Government to Government Solutions",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/government.svg",
+      "iconColored": "assets/icons/government-colored.svg",
+      "index": "01",
+      "isHovered": false
+    },
+    {
+      "id": 2,
+      "title": "Government to Users Solutions",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/users.svg",
+      "iconColored": "assets/icons/users-colored.svg",
+      "index": "02",
+      "isHovered": false
+    },
+    {
+      "id": 3,
+      "title": "Safeguard and Cybersecurity",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/shield.svg",
+      "iconColored": "assets/icons/shield-colored.svg",
+      "index": "03",
+      "isHovered": false
+    },
+    {
+      "id": 4,
+      "title": "AI and Digital Leadership",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "icon": "assets/icons/government.svg",
+      "iconColored": "assets/icons/government-colored.svg",
+      "index": "04",
+      "isHovered": false
+    }
+  ]
+}

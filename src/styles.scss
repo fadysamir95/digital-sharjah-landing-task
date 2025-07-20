@@ -1,0 +1,75 @@
+@use 'assets/scss/abstracts/_variables.scss' as *;
+@use 'assets/scss/abstracts/_functions.scss' as *;
+@use 'assets/scss/abstracts/_mixins.scss' as *;
+@use 'assets/scss/base/_reset.scss';
+@use 'assets/scss/base/_base.scss';
+@use 'assets/scss/rtl';
+
+/* Heavy */
+@font-face {
+  font-family: 'AvenirArabic Sharjah Heavy';
+  src: url('assets/fonts/AvenirArabic-SharjahGovt-Hv.woff2') format('woff2'),
+       url('assets/fonts/AvenirArabic-SharjahGovt-Hv.woff') format('woff'),
+       url('assets/fonts/AvenirArabic-SharjahGovt-Hv.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'AvenirArabic Sharjah Medium';
+  src: url('assets/fonts/AvenirArabic-SharjahGovt-Md.woff2') format('woff2'),
+       url('assets/fonts/AvenirArabic-SharjahGovt-Md.woff') format('woff'),
+       url('assets/fonts/AvenirArabic-SharjahGovt-Md.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Regular */
+@font-face {
+  font-family: 'AvenirArabic Sharjah Regular';
+  src: url('assets/fonts/AvenirArabic-SharjahGovt-Rg.woff2') format('woff2'),
+       url('assets/fonts/AvenirArabic-SharjahGovt-Rg.woff') format('woff'),
+       url('assets/fonts/AvenirArabic-SharjahGovt-Rg.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  font-family: $font-family-regular;
+}
+
+body.colorblind {
+  filter: grayscale(100%);
+}
+
+body.greenweakness {
+  filter: hue-rotate(100deg);
+}
+
+.body--fixed {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.swiper-button-prev {
+  left: to-rem(40);
+  right: unset;
+  bottom: 30%;
+  top: unset;
+}
+
+.swiper-button-next {
+  left: to-rem(60);
+  right: unset;
+  bottom: 30%;
+  top: unset;
+}
+
+.footer-wrapper {
+  display: flow-root;
+}
