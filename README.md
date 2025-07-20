@@ -46,13 +46,13 @@ This guide will help you get the project running locally using Angular and JSON 
 Install project dependencies
 **npm install**
 
+Start the Angular development server
+**ng serve**
+Angular app will be available at:
+👉 http://localhost:4200
+
 Start the JSON Server
 **npx json-server --watch db.json --port 3000**
 JSON Server will be available at:
 👉 http://localhost:3000
 Keep this server running while the Angular app is running to ensure proper data fetching.
-
-Start the Angular development server
-**ng serve**
-Angular app will be available at:
-👉 http://localhost:4200
