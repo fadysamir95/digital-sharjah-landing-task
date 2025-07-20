@@ -47,7 +47,7 @@ Install project dependencies
 **npm install**
 
 Start the JSON Server
-**npx json-server --watch src/assets/data/db.json --port 3000**
+**npx json-server --watch db.json --port 3000**
 JSON Server will be available at:
 👉 http://localhost:3000
 Keep this server running while the Angular app is running to ensure proper data fetching.
